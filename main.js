@@ -6,17 +6,23 @@
 
 // -------------- initialize variables -------------------- //
 
-let gameQuestion;
-let randomItem;
-let gameVar;
+// let gameQuestion;
+// let randomItem;
+// let gameVar;
+let userTurn = document.getElementById("your_turn");
+let computerTurn = document.getElementById("computers_pick");
+let whoWins = document.getElementById("tell_winner");
+
+let resetButton = document.getElementById("clearAll").addEventListener("click", clearBoard );
 
 
 // -------------------- get user input -------------------- //
 
 function playerSelection() {
-    gameQuestion = prompt("Enter (rock) or (paper) or (scissors).").toLowerCase();
-    console.log(`You have chosen ${gameQuestion}.`);
-    return gameQuestion;   
+    // gameQuestion = prompt("Enter (rock) or (paper) or (scissors).").toLowerCase();
+    console.log(`You have chosen ${userTurn.value}.`);
+    computerSelection();
+    return userTurn;   
 
 }
 
@@ -25,43 +31,54 @@ function playerSelection() {
 
 function computerSelection() {    
     gameVar = ['rock', 'paper', 'scissors'];
-    randomItem = gameVar[Math.floor(Math.random() * gameVar.length)];
-    console.log(`Computer has chosen ${randomItem}.`);
-    return randomItem;
+    computerTurn.value = gameVar[Math.floor(Math.random() * gameVar.length)];
+    console.log(`Computer has chosen ${computerTurn.value}.`);
+    computerTurn.value = computerTurn.value;
+    playRound(userTurn, computerTurn);
+    return computerTurn;
+    
         
 }
 
 
 // -------------- Find the winner of the game ------------- //
 
-function playRound(gameQuestion, randomItem) {   
-    if (gameQuestion === 'rock' && randomItem === 'rock') {
-        console.log('It is a tie!');
-    } else if (gameQuestion === 'rock' && randomItem === 'paper') {
-        console.log('Paper covers rock, computer wins.');
-    } else if (gameQuestion === 'rock' && randomItem === 'scissors') {
-        console.log('Rock breaks scissors, you win!');
-    } else if (gameQuestion === 'paper' && randomItem === 'rock') {
-        console.log('Paper covers rock, you win!');
-    } else if (gameQuestion === 'paper' && randomItem === 'paper') {
-        console.log('It is a tie.');
-    } else if (gameQuestion === 'paper' && randomItem === 'scissors') {
-        console.log('Scissors cuts paper, computer wins.');
-    } else if (gameQuestion === 'scissors' && randomItem === 'rock') {
-        console.log('Rock breaks scissors, computer wins.');
-    } else if (gameQuestion === 'scissors' && randomItem === 'paper') {
-        console.log('Scissors cuts paper, you win!');
-    } else if (gameQuestion === 'scissors' && randomItem === 'scissors') {
-        console.log('It is a tie.');
+function playRound(userTurn, computerTurn) {   
+    if (userTurn.value === 'rock' && computerTurn.value === 'rock') {
+        whoWins.value = ('It is a tie!');
+    } else if (userTurn.value === 'rock' && computerTurn.value === 'paper') {
+        whoWins.value = ('Paper covers rock, computer wins.');
+    } else if (userTurn.value === 'rock' && computerTurn.value === 'scissors') {        
+        whoWins.value = ('Rock breaks scissors, you win!');
+    } else if (userTurn.value === 'paper' && computerTurn.value === 'rock') {        
+        whoWins.value = ('Paper covers rock, you win!');
+    } else if (userTurn.value === 'paper' && computerTurn.value === 'paper') {
+        whoWins.value = ('It is a tie!');
+    } else if (userTurn.value === 'paper' && computerTurn.value === 'scissors') {        
+        whoWins.value = ('Scissors cuts paper, computer wins.');
+    } else if (userTurn.value === 'scissors' && computerTurn.value === 'rock') {        
+        whoWins.value = ('Rock breaks scissors, computer wins.');
+    } else if (userTurn.value === 'scissors' && computerTurn.value === 'paper') {       
+        whoWins.value = ('Scissors cuts paper, you win!');
+    } else if (userTurn.value === 'scissors' && computerTurn.value === 'scissors') {
+        whoWins.value = ('It is a tie!');
     }     
+}
+
+function clearBoard() {
+    userTurn.value = " ";
+    computerTurn.value = " ";
+    whoWins.value = " ";
+    
+
 }
 
 // ------------------- Reset program ---------------------- //
 
-function clear() {
-    prompt("Click OK to play again.")
-    location.reload();    
-}
+// function clear() {
+//     prompt("Click OK to play again.")
+//     location.reload();    
+// }
 
 // ---------------------- Run program --------------------- //
 // prompt('You need developer tools console open to play this game, if not open hit F12 in firefox to open console.')
