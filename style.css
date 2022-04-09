@@ -1,0 +1,21 @@
+@font-face {
+    font-family: myFont1 ;
+    src: url("fonts/Quicksand-Light.ttf");
+    
+}
+
+body {
+    background-color:black;
+}
+
+.container1 {
+    display:grid;
+    text-align: center;
+}
+
+#name {
+    color:white;
+    font-family:myFont1, Arial, Helvetica, sans-serif;
+    font-size:35px;
+    
+}
