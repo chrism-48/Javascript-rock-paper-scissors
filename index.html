@@ -11,17 +11,18 @@
             <div class="container1">
                 <h1 id="name">Rock Paper Scissors</h1>
             </div>
+           
             <div class="container2">
                 <label class="label1"for="question">Enter rock, paper, or scissors
                      below then click submit.</label>
-                <input id="your_turn" class="question"type="text">
+                <input id="your_turn" class="question"type="text" value="">
                 <button id="btn1" onclick="playerSelection()">submit</button>
-                <label class="label1">Computers random pick</label>
-                <input id="computers_pick" class="question"type="text" readonly>
-                <label class="label1"for="">And the winner is</label>
-
-                <input id="tell_winner" class="question"type="text" readonly>
-                <button id="clearAll">Reset</button>
+                <label class="label1">Computers pick</label>
+                <input id="computers_pick" class="question"type="text" value="" readonly>
+                <!-- <button id="btn1" onclick="playRound()">click</button> -->
+                <label class="label1"for="">Outcome</label>
+                <input id="tell_winner" class="question"type="text" value="" readonly>
+                <button id="clearAll">reset</button>
                 
                 
             </div>

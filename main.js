@@ -8,9 +8,9 @@
 
 // let gameQuestion;
 // let randomItem;
-// let gameVar;
-let userTurn = document.getElementById("your_turn");
-let computerTurn = document.getElementById("computers_pick");
+let gameVar;
+let user = document.getElementById("your_turn");
+let computer = document.getElementById("computers_pick");
 let whoWins = document.getElementById("tell_winner");
 
 let resetButton = document.getElementById("clearAll").addEventListener("click", clearBoard );
@@ -20,9 +20,11 @@ let resetButton = document.getElementById("clearAll").addEventListener("click", 
 
 function playerSelection() {
     // gameQuestion = prompt("Enter (rock) or (paper) or (scissors).").toLowerCase();
-    console.log(`You have chosen ${userTurn.value}.`);
+    // user = user.value.toLowerCase();
+    user.value.toLowerCase();
+    console.log(`You have chosen ${user.value}.`);
     computerSelection();
-    return userTurn;   
+    return user.value;   
 
 }
 
@@ -30,12 +32,13 @@ function playerSelection() {
 // --------------- get computer random input ------------- //
 
 function computerSelection() {    
-    gameVar = ['rock', 'paper', 'scissors'];
-    computerTurn.value = gameVar[Math.floor(Math.random() * gameVar.length)];
-    console.log(`Computer has chosen ${computerTurn.value}.`);
-    computerTurn.value = computerTurn.value;
-    playRound(userTurn, computerTurn);
-    return computerTurn;
+    let gameVar = ['rock', 'paper', 'scissors'];
+    computer.value = gameVar[Math.floor(Math.random() * gameVar.length)];
+    console.log(`Computer has chosen ${computer.value}.`);
+    // computer.value = computer.value;
+    computer.value = computer.value;
+    // playRound(user, computer);
+    return computer.value;
     
         
 }
@@ -43,31 +46,43 @@ function computerSelection() {
 
 // -------------- Find the winner of the game ------------- //
 
-function playRound(userTurn, computerTurn) {   
-    if (userTurn.value === 'rock' && computerTurn.value === 'rock') {
+function playRound() {
+     
+     
+    if (user.value === 'rock' && computer.value === 'rock') {
+        console.log(`1st instance ${whoWins.value}`)
         whoWins.value = ('It is a tie!');
-    } else if (userTurn.value === 'rock' && computerTurn.value === 'paper') {
+    } else if (user.value === 'rock' && computer.value === 'paper') {
+        console.log(`2nd instance ${whoWins.value}`)
         whoWins.value = ('Paper covers rock, computer wins.');
-    } else if (userTurn.value === 'rock' && computerTurn.value === 'scissors') {        
+    } else if (user.value === 'rock' && computer.value === 'scissors') { 
+        console.log(`3rd instance ${whoWins.value}`)
         whoWins.value = ('Rock breaks scissors, you win!');
-    } else if (userTurn.value === 'paper' && computerTurn.value === 'rock') {        
+    } else if (user.value === 'paper' && computer.value === 'rock') { 
+        console.log(`4th instance ${whoWins.value}`)
         whoWins.value = ('Paper covers rock, you win!');
-    } else if (userTurn.value === 'paper' && computerTurn.value === 'paper') {
+    } else if (user.value === 'paper' && computer.value === 'paper') {
+        console.log(`5th instance ${whoWins.value}`)
         whoWins.value = ('It is a tie!');
-    } else if (userTurn.value === 'paper' && computerTurn.value === 'scissors') {        
+    } else if (user.value === 'paper' && computer.value === 'scissors') { 
+        console.log(`6th instance ${whoWins.value}`)
         whoWins.value = ('Scissors cuts paper, computer wins.');
-    } else if (userTurn.value === 'scissors' && computerTurn.value === 'rock') {        
+    } else if (user.value === 'scissors' && computer.value === 'rock') { 
+        console.log(`7th instance ${whoWins.value}`)
         whoWins.value = ('Rock breaks scissors, computer wins.');
-    } else if (userTurn.value === 'scissors' && computerTurn.value === 'paper') {       
+    } else if (user.value === 'scissors' && computer.value === 'paper') { 
+        console.log(`8th instance ${whoWins.value}`)
         whoWins.value = ('Scissors cuts paper, you win!');
-    } else if (userTurn.value === 'scissors' && computerTurn.value === 'scissors') {
+    } else if (user.value === 'scissors' && computer.value === 'scissors') {
+        console.log(`9th instance ${whoWins.value}`)
         whoWins.value = ('It is a tie!');
-    }     
+    } 
+    
 }
 
 function clearBoard() {
-    userTurn.value = " ";
-    computerTurn.value = " ";
+    user.value = " ";
+    computer.value = " ";
     whoWins.value = " ";
     
 
