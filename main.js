@@ -7,7 +7,7 @@
 // -------------- initialize variables -------------------- //
 
 
-let gameVar;
+let gameVar = ['rock', 'paper', 'scissors'];
 let user = document.getElementById("your_turn");
 let computer = document.getElementById("computers_pick");
 let whoWins = document.getElementById("tell_winner");
@@ -32,10 +32,12 @@ function playerSelection() {
 
 
 function computerSelection() {    
-    let gameVar = ['rock', 'paper', 'scissors'];
+    // gameVar = ['rock', 'paper', 'scissors'];
     computer.value = gameVar[Math.floor(Math.random() * gameVar.length)];
     // console.log(`Computer has chosen ${computer.value}.`);
     // computer.value = computer.value;
+    // setTimer(function(){playRound(user, computer)},100);
+    playRound(user, computer);
     return computer.value;
 
     
@@ -45,9 +47,8 @@ function computerSelection() {
 // -------------- Find the winner of the game ------------- //
 
 function playRound(user, computer) {
-    // user = user.value;
-    // computer = computer.value;
-    console.log(user.value)
+    
+    
               
     if (user.value === 'rock' && computer.value === 'rock') {               
         whoWins.value = 'It is a tie!';   
@@ -84,6 +85,7 @@ function clearBoard() {
     user.value = " ";
     computer.value = " ";
     whoWins.value = " ";
+    
 }
 
 

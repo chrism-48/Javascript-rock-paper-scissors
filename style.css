@@ -12,13 +12,23 @@
 
 body {
     background-color:rgb(31, 23, 44);  
+    background-image:url("images/pexels-mudassir-ali-2680270.jpg");
+    
+    padding-top:20px;
+     
 }
+
+    
+
+
 .whole_container {
     display:grid; 
     grid-template-columns: repeat( 3, 1fr);  
     justify-content: center; 
-    background-color:rgb(31, 23, 44); 
+    background-color:rgb(31, 23, 44);
+    /* background-image:url("images/pexels-johannes-plenio-1103970.jpg"); */
     grid-template-rows: 100px; 
+    border-radius: 20px;
    
     
 }
@@ -27,6 +37,7 @@ body {
     /* background-color:red; */
     grid-column-start:2 ;
     grid-column-end:2 ;
+    
      
     
 }
@@ -47,7 +58,9 @@ body {
     gap:10px; 
     /* background-color:rgb(0, 17, 255);  */
     grid-column-start:2 ;
-    grid-column-end:2 ;     
+    grid-column-end:2 ; 
+    
+       
 }
 
 .label1 {
@@ -73,14 +86,14 @@ body {
 }
 
 #computers_pick {
-    margin-bottom:70px;
+    margin-bottom:0px;
 }
 #tell_winner {
     margin-top:0px;
     font-size:23px;
     text-align: center;
     font-family: myFont2, Arial, Helvetica, sans-serif;
-    padding-top:20px;
+    padding-top:30px;
     color:rgb(0, 0, 0);
 }
 #clearAll {
@@ -89,4 +102,5 @@ body {
     max-width:60px;
     color:rgb(0, 0, 0);
     font-family:myfont2, Arial, Helvetica, sans-serif;
+    
 }
