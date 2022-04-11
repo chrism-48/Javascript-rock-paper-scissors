@@ -1,3 +1,4 @@
+
 //----------------------------------------------------------//
 //   A game of rock paper scissors by:Chris Moore 2022      //
 //----------------------------------------------------------//
@@ -15,6 +16,9 @@ let resetButton = document.getElementById("clearAll").addEventListener("click", 
 let submitButton = document.getElementById("btn1").addEventListener('click',playerSelection)
 // let listenToBox = document.getElementById('computers_pick').addEventListener('change', playRound(user, computer))
 // -------------------- get user input -------------------- //
+
+
+
 
 
 function playerSelection() {
@@ -44,12 +48,11 @@ function computerSelection() {
 // -------------- Find the winner of the game ------------- //
 
 function playRound(user, computer) {
-    console.log('Hello');
-    
-    
+   
               
     if (user.value === 'rock' && computer.value === 'rock') {               
-        whoWins.value = 'It is a tie!';   
+        whoWins.value = 'It is a tie!';
+        console.log('it is a tie'); 
     } else if (user.value === 'rock' && computer.value === 'paper') {       
         whoWins.value = 'Paper covers rock, computer wins.';
 
@@ -86,4 +89,12 @@ function clearBoard() {
     
 }
 
+// -------------- Clear all input boxes on page load ------------- //
 
+function init() {
+    user.value = " ";
+    computer.value = " ";
+    whoWins.value = " ";
+}
+
+window.onload = init;

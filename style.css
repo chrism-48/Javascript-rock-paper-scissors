@@ -27,6 +27,8 @@ body {
     background-color:rgb(31, 23, 44);
     grid-template-rows: auto; 
     border-radius: 20px;
+    
+   
    
     
 }
@@ -34,6 +36,10 @@ body {
     display:grid; 
     grid-column-start:2 ;
     grid-column-end:2 ;
+    height:70px;
+    padding-bottom:40px; 
+
+
     
      
     
@@ -44,7 +50,7 @@ body {
     font-family:myFont1, Arial, Helvetica, sans-serif;
     font-size:29px;
     text-align: center;
-    padding-bottom:40px;   
+    padding-top:20px;   
 }
 
 
@@ -55,8 +61,7 @@ body {
     gap:10px; 
     grid-column-start:2 ;
     grid-column-end:2 ; 
-    
-       
+      
 }
 
 .label1 {
