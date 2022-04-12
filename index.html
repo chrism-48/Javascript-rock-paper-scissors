@@ -14,18 +14,22 @@
            
             <div class="container2">
                 <label class="label1"for="yourTurn">Users pick</label>
-                <input id="yourTurn" class="question"type="text" value="null">
+                <input id="yourTurn" class="question"type="text" value=null>
                 <button id="btn1">submit</button>
                 <br>
                 <label class="label1" for="computers_pick">Computers pick</label>
-                <input id="computers_pick" class="question"type="text" value="null" readonly>
+                <input id="computers_pick" class="question"type="text" value=null readonly>
                 <!-- <button id="btn2" onclick="playRound(user, computer)">click</button> -->
                 <label class="label1"for="tell_winner">Outcome</label>
-                <textarea id="tell_winner" cols="18" rows="2" value="winner"></textarea>
-                <button id="clearAll">reset</button>
-                
-                
+                <textarea id="tell_winner" cols="18" rows="2" value="winner" type="text"></textarea>
+                <button id="clearAll">reset</button> 
+                <br> 
+                <label id="scoreLabel" for="userScore">user</label>
+                <input class="myScore" type="number" name="userScore" id="score1" readonly>
+                <label id="scoreLabel" for="computerScore">computer</label>
+                <input class="myScore" type="number" name="computerScore" id="score2" readonly>             
             </div>
+            
         </div>
 
 
