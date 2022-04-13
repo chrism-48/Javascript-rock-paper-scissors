@@ -30,9 +30,9 @@ body {
     justify-content:center;
     width:245px; 
     border-style: solid;
-    border-color:rgba(255, 255, 255, 0.071); 
-    border-width:3px;
-    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.161);
+    border-color:rgba(255, 255, 255, 0.322); 
+    border-width:.1px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.401);
 }
 .container1 {
     grid-column-start:2 ;
@@ -124,18 +124,24 @@ button:hover {
     color:blue;
     
 }
-
+#mainScoreLabel {
+    color:white;
+    position: relative;
+    left:10px;
+}
 #scoreLabel {
     color:white;
     font-size:12px;
     position: relative;
-    left:40px;
+    left:15px;
 }
 
 .myScore {
     width:20px;
     -moz-appearance: textfield;
     position: relative;
-    left:40px;
+    left:15px;
+    
+    
     
 }
