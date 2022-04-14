@@ -15,8 +15,7 @@ let radioVal;
 let user = document.querySelectorAll('input[name="choice"]');
 user.forEach(radio => {
 radio.addEventListener('click', function () {
-    radioVal = radio.value;
-    // console.log(radioVal);
+    radioVal = radio.value;    
 });
 });
 
