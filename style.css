@@ -34,6 +34,7 @@ body {
     border-width:.1px;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.401);
 }
+
 .container1 {
     grid-column-start:2 ;
     grid-column-end:2 ;
@@ -48,12 +49,19 @@ body {
     text-align: center;
     padding-top:0px;   
 }
-
+ 
 .container2 {
-    height:350px;
+    height:380px;
     grid-column-start:2 ;
     grid-column-end:2 ;       
 }
+
+#labelForUser {
+    color:white;
+    font-size:12px;
+    font-family: myFont2, Arial, Helvetica, sans-serif;
+}
+
 
 .label1 {
     color:rgb(194, 194, 194);
@@ -63,6 +71,11 @@ body {
     grid-column-start:2 ;
     grid-column-end:2 ;    
 }
+.radioLabel {
+    color:white;
+    font-family: myFont2, Arial, Helvetica, sans-serif;
+
+}
 
 .question {
     text-align: center;
@@ -70,24 +83,24 @@ body {
     letter-spacing: 1.0px;
     font-size:18px;
     max-width:240px;
-    margin-bottom:3px;
+    margin-bottom:0px;
     border-radius:4px; 
     background-color: rgb(255, 255, 255);
     color:rgb(0, 0, 0);
 }
 
 #btn1 {
-    margin-bottom:10px;
+    margin-bottom:0px;
     font-family:myfont2, Arial, Helvetica, sans-serif;
-    margin-bottom:33px;
+    margin-bottom:23px;
 }
 
 #computers_pick {
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 #btn2 {
-    margin-bottom:10px;
+    margin-bottom:0px;
     font-family:myfont2, Arial, Helvetica, sans-serif;
      
 }
@@ -97,7 +110,7 @@ body {
     font-size:23px;
     text-align: center;
     font-family: myFont2, Arial, Helvetica, sans-serif;
-    padding-top:10px;
+    padding-top:5px;
     color:rgb(0, 0, 0);
     max-width:240px;
     margin-bottom:3px;

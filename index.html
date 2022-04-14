@@ -13,11 +13,24 @@
             </div>
            
             <div class="container2">
-                <label class="label1"for="yourTurn">Users pick</label>
-                <input id="yourTurn" class="question"type="text" value=null>
+                <!-- <label class="label1"for="yourTurn">User pick</label>
+                <input id="yourTurn" class="question"type="text" value=null> -->
+                <label id="labelForUser" for="radioButtons">User pick (choose one)</label><br>
+
+                <input class="radioInput" type="radio" id="rck" name="choice" value="rock">
+                <label class="radioLabel" for="html">rock</label><br>
+                <input class="radioInput" type="radio" id="ppr" name="choice" value="paper">
+                <label class="radioLabel" for="css">paper</label><br>
+                <input class="radioInput" type="radio" id="scs" name="choice" value="scissors">
+                <label class="radioLabel" for="javascript">scissors</label>
+
+
+
+                <br>
+                <br>
                 <button id="btn1">submit</button>
                 <br>
-                <label class="label1" for="computers_pick">Computers pick</label>
+                <label class="label1" for="computers_pick">Computer pick</label>
                 <input id="computers_pick" class="question"type="text" value=null readonly>
                 <!-- <button id="btn2" onclick="playRound(user, computer)">click</button> -->
                 <label class="label1"for="tell_winner">Outcome</label>
