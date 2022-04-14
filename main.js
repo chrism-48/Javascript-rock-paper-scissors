@@ -28,6 +28,7 @@ let myUserScore = document.getElementById('score1');
 let myComputerScore = document.getElementById('score2');
 let num1 = document.getElementById('score1').value = 0;
 let num2 = document.getElementById('score2').value = 0;
+var winNum = 0;
 
 // ------------- get user and computer input -------------- //
 
@@ -55,30 +56,31 @@ function playRound(user, computer) {
 
     } else if (radioVal === 'rock' && computer.value === 'paper') {       
         whoWins.value = 'Paper covers rock, computer wins.';
-       
+        score2.value ++;
 
     } else if (radioVal === 'rock' && computer.value === 'scissors') {       
         whoWins.value = 'Rock breaks scissors, you win!';
+        score1.value ++;
        
 
     } else if (radioVal === 'paper' && computer.value === 'rock') {         
         whoWins.value = 'Paper covers rock, you win!';
-       
+        score1.value ++;
 
     } else if (radioVal === 'paper' && computer.value === 'paper') {        
         whoWins.value = 'It is a tie!';
 
     } else if (radioVal === 'paper' && computer.value === 'scissors') {         
         whoWins.value = 'Scissors cuts paper, computer wins.';
-        
+        score2.value ++;
 
     } else if (radioVal === 'scissors' && computer.value === 'rock') {        
         whoWins.value = 'Rock breaks scissors, computer wins.';
-        
+        score2.value ++;
 
     } else if (radioVal === 'scissors' && computer.value === 'paper') {         
         whoWins.value = 'Scissors cuts paper, you win!';
-       
+        score1.value ++;
 
     } else if (radioVal === 'scissors' && computer.value === 'scissors') {       
         whoWins.value = 'It is a tie!';

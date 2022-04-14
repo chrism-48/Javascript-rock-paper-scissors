@@ -147,12 +147,12 @@ button:hover {
     
 }
 #mainScoreLabel {
-    color:white;
+    color:rgb(194, 194, 194);
     position: relative;
     left:10px;
 }
 #scoreLabel {
-    color:white;
+    color:rgb(194, 194, 194);
     font-size:12px;
     position: relative;
     left:15px;
