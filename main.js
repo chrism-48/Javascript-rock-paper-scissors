@@ -56,30 +56,30 @@ function playRound(user, computer) {
 
     } else if (radioVal === 'rock' && computer.value === 'paper') {       
         whoWins.value = 'Paper covers rock, computer wins.';
-        myComputerScore.value = parseInt(num2) + parseInt(1);
+       
 
     } else if (radioVal === 'rock' && computer.value === 'scissors') {       
         whoWins.value = 'Rock breaks scissors, you win!';
-        myUserScore.value = parseInt(num1) + parseInt(1);
+       
 
     } else if (radioVal === 'paper' && computer.value === 'rock') {         
         whoWins.value = 'Paper covers rock, you win!';
-        myUserScore.value = parseInt(num1) + parseInt(1);
+       
 
     } else if (radioVal === 'paper' && computer.value === 'paper') {        
         whoWins.value = 'It is a tie!';
 
     } else if (radioVal === 'paper' && computer.value === 'scissors') {         
         whoWins.value = 'Scissors cuts paper, computer wins.';
-        myComputerScore.value = parseInt(num2) + parseInt(1);
+        
 
     } else if (radioVal === 'scissors' && computer.value === 'rock') {        
         whoWins.value = 'Rock breaks scissors, computer wins.';
-        myComputerScore.value = parseInt(num2) + parseInt(1);
+        
 
     } else if (radioVal === 'scissors' && computer.value === 'paper') {         
         whoWins.value = 'Scissors cuts paper, you win!';
-        myUserScore.value = parseInt(num1) + parseInt(1);
+       
 
     } else if (radioVal === 'scissors' && computer.value === 'scissors') {       
         whoWins.value = 'It is a tie!';
